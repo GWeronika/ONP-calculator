@@ -78,7 +78,7 @@ public class Main {
                 boolean k = false;          //determines whether a digit is in the integer or fractional part of a number
                 double liczba = 0.0;
                 while(j < ONP.length() && ONP.charAt(j) != ' ') {         //while character indexed j is not a whitespace it converts char to int
-                    if(k == false) {            //if false, digits are in the integer part of the number
+                    if(!k) {            //if false, digits are in the integer part of the number
                         if(ONP.charAt(j) != '.') {
                             liczba = liczba * potegowanie(10, j - i) + (ONP.charAt(j) - '0');
                         }
