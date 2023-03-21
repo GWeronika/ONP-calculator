@@ -7,7 +7,7 @@ public class Main {
         return x + y;
     }
     static double odejmowanie(double x, double y) {     //funkcja wykonujaca odejmowanie
-        return x - y;
+        return y - x;
     }
     static double mnozenie(double x, double y) {        //funkcja wykonujaca mnozenie
         return x * y;
@@ -80,7 +80,7 @@ public class Main {
                 while(j < ONP.length() && ONP.charAt(j) != ' ') {         //while character indexed j is not a whitespace it converts char to int
                     if(!k) {            //if false, digits are in the integer part of the number
                         if(ONP.charAt(j) != '.') {
-                            liczba = liczba * potegowanie(10, j - i) + (ONP.charAt(j) - '0');
+                            liczba = liczba * 10 + (ONP.charAt(j) - '0');
                         }
                         else {
                             k = true;
@@ -88,8 +88,7 @@ public class Main {
                         }          //changes when there is a comma
                     }
                     else {          //if true, digits are in the fractional part of the number
-                        liczba += ONP.charAt(j) * potegowanie(10, -(j - order));
-                        //System.out.println(liczba);
+                        liczba += ONP.charAt(j) / potegowanie(10, j - order);
                     }
                     j++;            //goes to the next character
                 }
