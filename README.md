@@ -1,2 +1,2 @@
 # ONP-calculator
-Reverse Polish Notation
+Reverse Polish Notation calculator
